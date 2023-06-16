@@ -1,0 +1,71 @@
+.header{
+    background-color: #a435f0;
+    color: white;
+}
+
+.card-body{
+    background-color: #ebe6fc;
+}
+
+.ply-name{
+    color: #5624d0;
+}
+.edit{
+    color: #a435f0;
+    cursor: pointer;
+    margin: 0 auto;
+}
+.btn{
+    background-color: #5624d0 !important;
+    color: white !important;
+    display: flex !important;
+    justify-content: center !important;
+    align-items: center !important;
+}
+.modal-title {
+    margin: 0 auto;
+}
+.form{
+    display: flex;
+    justify-content: center;
+}
+.modal-footer{
+    justify-content: center !important;
+}
+
+.winner-msg{
+    background-color: #25105a;
+    color: white;
+    margin-bottom: 30px;
+}
+
+.game-field{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    justify-content: center;
+    align-content: center;
+    gap: 0.1rem;
+    padding: 0;
+    max-width: 250px;
+    margin: 0 auto;
+}
+.square{
+    width: 100px;
+    height: 100px;
+    background-color: #b6a9d8;
+    margin: 0.2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.square:hover{
+    background-color: #25105a;
+}
+.card-body{
+    min-height: 230px;
+    min-width: 250px;
+}
+.closeModale{
+    display: none;
+}
