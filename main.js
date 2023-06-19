@@ -1,6 +1,6 @@
 
-
-   // Wait for the DOM to load
+// Player 1
+// Wait for the DOM to load
    document.addEventListener('DOMContentLoaded', function() {
     // Get the form and result div elements
     var form = document.getElementById('form');
@@ -34,9 +34,7 @@ function closeModal(){
   }  
 
 SubmitBtn.addEventListener('click', closeModal)
-
-
-
+// Player 2
 // Wait for the DOM to load
 document.addEventListener('DOMContentLoaded', function() {
   // Get the form and result div elements
@@ -66,5 +64,30 @@ else{
   alert('Plese fill out the form')
 }
 }  
-
 SubmitBtn2.addEventListener('click', closeModal2)
+
+// Start a new game
+
+const strNewBtn = document.getElementById('start-new-btn');
+const gameField = document.getElementById('game-field');
+var enteredName2 = document.getElementById('player-name2').value;
+var enteredNameLength2 = enteredName2.length;
+console.log("EMPTY" + enteredNameLength2)
+var enteredName = document.getElementById('player-name').value;
+var enteredNameLength = enteredName.length;
+console.log("EMPTY" + enteredNameLength)
+
+function startNewGameBtn (){
+  console.log('clicked')
+  
+if(enteredNameLength > 2 && enteredNameLength2 > 2){
+  alert('Please fill out the name fields')
+}
+else
+{
+  gameField.classList.add('game-field1')
+
+}
+}
+
+strNewBtn.addEventListener('click', startNewGameBtn)

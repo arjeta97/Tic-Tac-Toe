@@ -23,7 +23,7 @@
                     </div>
                     <div class="card-text">
                         <h3 class="text-center fw-bold">X</h3>
-                        <a class="btn text-center edit mt-3 w-50 d-flex justify-content-center align-items-center" data-bs-toggle="modal" href="#player-modal" role="button">Edit</a>
+                        <a class="btn text-center edit mt-3 w-50 d-flex justify-content-center align-items-center" data-bs-toggle="modal" data-playerid="1" href="#player-modal" role="button">Edit</a>
                     </div>
                 </div>
             </div>
@@ -55,7 +55,7 @@
                     </div>
                     <div class="card-text">
                         <h3 class="text-center fw-bold">O</h3>
-                        <a class="btn text-center edit mt-3 w-50 d-flex justify-content-center align-items-center" data-bs-toggle="modal" href="#player2-modal" role="button">Edit</a>
+                        <a class="btn text-center edit mt-3 w-50 d-flex justify-content-center align-items-center" data-playerid="2" data-bs-toggle="modal" href="#player2-modal" role="button">Edit</a>
                     </div>
                 </div>
             </div>
@@ -83,15 +83,15 @@
             
         </div>
         <div class="btnConteinaer text-center d-flex justify-content-center align-items-center">
-            <button type="button" class=" btn">Start a new game</button>
+            <button type="button" class="btn" id="start-new-btn">Start a new game</button>
         </div>
         <p class="text-center pt-5">Its your turn <b>PLAYER NAME</b></p>
-        <div class="container winner-msg d-flex flex-column justify-content-center align-items-center w-50">
+        <div class="container winner-msg flex-column justify-content-center align-items-center w-50">
             <h3 class="p-4 fw-bold">You won <span>Player name</span></h3>
             <p>Click 'Start a new game</p>
         </div>
         
-        <div class="game-field">
+        <div class="game-field" id="game-field">
 
             <div class="square"></div>
             <div class="square"></div>
