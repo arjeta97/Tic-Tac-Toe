@@ -207,16 +207,16 @@ input:focus-visible {
 @media only screen and (max-width: 780px) and (min-width: 300px)  {
 
     .btnConteinaer {
-        padding-top: 40px !important;
-        padding-bottom: 40px !important;
+        padding-top: 20px !important;
+        padding-bottom: 20px !important;
     }
     .game-field{
-        padding-bottom: 40px !important;
+        padding-bottom: 20px !important;
     }
 
     .card-body{
-        min-height: 150px;
-        min-width: 170px;
+        min-height: 120px;
+        min-width: 130px;
         max-height: 150px;
         max-width: 170px;
         width: 100%;
