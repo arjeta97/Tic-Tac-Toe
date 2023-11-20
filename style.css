@@ -1,14 +1,90 @@
+@import url('https://fonts.googleapis.com/css2?family=Albert+Sans&display=swap');
+
+@font-face {
+    font-family: TicTacToe;
+    src: url("./tictactoe/TicTacToe.ttf");
+}
+body{
+    background-image: url('./photo-1596865249308-2472dc5807d7.avif');
+    background-repeat: no-repeat;
+    background-position: center;
+}
 .header{
-    background-color: #a435f0;
+    background-color: 	#444546;
+    opacity: 0.8;
+    color: white;
+    font-family: TicTacToe;
+    box-shadow: 0px 5px 10px 0px rgba(0,255,255,0.7);    
+    max-width: 850px;
+    margin: 0 auto;
+    position: relative;
+    top: 30px;        
+}
+.container{
+    padding-top: 30px;
+}
+.xysymbol{
+    font-family: TicTacToe;
     color: white;
 }
-
 .card-body{
-    background-color: #ebe6fc;
+    background-color:#444546;
+    box-shadow: 0px 5px 10px 0px rgba(0,255,255,0.7);    
+    border-radius: 10px !important;
+    flex-direction: column;
+}
+.card{
+    border-color: #444546;
+    border: none !important;
+    border-radius: 10px !important;
+    background-color:#444546 !important;
+}
+.modal-header{
+    border-bottom:1px solid rgba(0,255,255,0.7) !important;
+}
+.modal-footer{
+    border-top:1px solid rgba(0,255,255,0.7) !important;
 }
 
+.cancelBtnModal , .edit, .submit, #start-new-btn{
+    font-family: TicTacToe;
+    color: #444546 !important;
+    text-transform: uppercase;
+    line-height: 26px;
+    letter-spacing: 2px;
+    font-weight: bolder !important;
+}
+
+.modal-content{
+    background-color: #444546 !important;
+}
+.modal-title{
+    font-family: TicTacToe;
+    color: white !important;
+}
+.modalply-name{
+    font-family: TicTacToe;
+    color: white;
+    text-transform: uppercase;
+    font-size: 27px;
+}
+#player-name, #player-name2{
+    background: none;
+    border: none;
+    box-shadow: 0 4px 2px -2px rgba(0,255,255,0.7);
+    text-align: center;
+}
+input:focus-visible {
+    outline-offset:unset !important;
+    outline: none;
+}
+.player-ontro {
+    padding-top: 30px !important;
+}
 .ply-name{
-    color: #5624d0;
+    color:#11D1D1;
+    font-family: TicTacToe;
+
 }
 .edit{
     color: #a435f0;
@@ -16,8 +92,8 @@
     margin: 0 auto;
 }
 .btn{
-    background-color: #5624d0 !important;
-    color: white !important;
+    background-color: #11D1D1 !important;
+    color: #444546 ;
     display: flex !important;
     justify-content: center !important;
     align-items: center !important;
@@ -34,9 +110,10 @@
 }
 
 .winner-msg{
-    background-color: #25105a;
-    color: white;
-    margin-bottom: 30px;
+    background-color: transparent;
+    color: #11D1D1;
+    font-family: TicTacToe;
+    font-size: 30px !important;
 }
 
 .game-field{
@@ -53,18 +130,33 @@
 .square{
     width: 100px;
     height: 100px;
-    background-color: #b6a9d8;
+    background-color: #444546;
     margin: 0.2rem;
     display: flex;
     justify-content: center;
     align-items: center;
+    box-shadow: 2px 5px 5px 0px rgba(0,255,255,0.7);    
+    font-family: TicTacToe;
+    color: white !important;
+    font-size: 40px;
 }
 .square:hover{
-    background-color: #25105a;
+    background-color:#337475;
 }
+.square:active{
+    background-color: #11D1D1;
+}
+.square{
+    color: white !important;
+}
+
 .card-body{
-    min-height: 230px;
-    min-width: 250px;
+    min-height: 200px;
+    min-width: 230px;
+    max-height: 200px;
+    max-width: 230px;
+    width: 100%;
+    height: 100%;
 }
 .closeModale{
     display: none;
@@ -77,3 +169,49 @@
 .winner-msg{
     display: none;
 }
+
+.disabled{
+    pointer-events: none;
+    background-color: #337475 !important;
+    box-shadow: none !important;
+}
+
+.turnTag{
+    color:#11D1D1;
+    font-family: TicTacToe;
+    font-size: 25px;
+    font-weight: bolder;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    display: none;
+}
+.turnTag span{
+    color:#11D1D1;
+    font-family: TicTacToe;
+    font-size: 25px;
+    font-weight: bolder;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+}
+#player-name-switch{
+    text-shadow:10px 9px 20px rgb(50, 211, 222), -10px 9px 20px #002fff ,-13px -9px 20px rgb(0, 19, 128), 13px 9px 20px #00486a;
+}
+
+@media only screen and (max-width: 780px) and (min-width: 300px)  {
+
+    .container{
+        flex-direction: column;
+    }
+    .player-intro{
+        flex-direction: column;
+    }
+    .btnConteinaer {
+        padding-top: 40px !important;
+        padding-bottom: 40px !important;
+    }
+    .game-field{
+        padding-bottom: 40px !important;
+    }
+}
+
+

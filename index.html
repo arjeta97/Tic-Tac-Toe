@@ -5,25 +5,24 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Tic Tac Toe</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
 </head>
-<link rel="stylesheet" href="style.css">
-<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+
 <body>
-    <div class="header d-flex flex-column justify-content-center align-items-center p-5">
-        <h3>Play Tic-Tac-Toe</h3>
-        <p>Build with HTML, CSS, BOOTSTRAP, JavaScript and AMORE!</p>
+    <div class="header d-flex flex-column justify-content-center align-items-center p-4">
+        <h1>Play Tic-Tac-Toe</h1>
     </div>
     <div class="container">
         <div class="player-intro d-flex justify-content-center align-items-center">
             <div class="player-1 card m-5">
-                <div class="card-body">
+                <div class="card-body d-flex justify-content-center align-items-center">
                     <div class="card-title">
-                        <p class="text-center fw-bold">Player 1</p>
-                        <h3 class="text-center text-uppercase ply-name fw-bold" id="ply-name">Player name</h3>
+                        <h3 class="text-center text-uppercase ply-name fw-bold" id="ply-name">Player one</h3>
                     </div>
                     <div class="card-text">
-                        <h3 class="text-center fw-bold">X</h3>
-                        <a class="btn text-center edit mt-3 w-50 d-flex justify-content-center align-items-center" data-bs-toggle="modal" data-playerid="1" href="#player-modal" role="button">Edit</a>
+                        <h3 class="text-center fw-bold xysymbol">X</h3>
+                        <a class="btn text-center edit mt-3 d-flex justify-content-center align-items-center" data-bs-toggle="modal" data-playerid="1" href="#player-modal" role="button">Edit</a>
                     </div>
                 </div>
             </div>
@@ -34,47 +33,47 @@
                             <h3 class="modal-title text-uppercase text-center">Choose your name</h3>
                         </div>
                         <div class="modal-body">
-                            <p class="fw-bold text-center">Player name</p>
-                            <form id="form">
-                                <input type="text" name="name" id="player-name" required minlength="4">
-                                <button type="submit" class="btn submit" id="submit">Submit</button>
+                            <form id="form" class="d-flex flex-column align-items-center justify-content-center">
+                                <input type="text" name="name" id="player-name" required minlength="4" placeholder="Enter you name">
+                                <button type="submit" class="btn submit mt-3" id="submit">Submit</button>
                             </form>
                         </div>
                         <div class="modal-footer">
-                            <button type="button" class="btn" data-bs-dismiss="modal" aria-label="Close">Cancel</button>
+                            <button type="button" class="btn cancelBtnModal" data-bs-dismiss="modal" aria-label="Close">Cancel</button>
                         </div>
                     </div>
                 </div>
             </div>
 
             <div class="player-2 card">
-                <div class="card-body">
+                <div class="card-body d-flex justify-content-center align-items-center">
                     <div class="card-title">
-                        <p class="text-center fw-bold">Player 2</p>
-                        <h3 class="text-center text-uppercase ply-name fw-bold" id="ply-name2">Player name</h3>
+                        <h3 class="text-center text-uppercase ply-name fw-bold" id="ply-name2">Player two</h3>
                     </div>
+                    
                     <div class="card-text">
-                        <h3 class="text-center fw-bold">O</h3>
-                        <a class="btn text-center edit mt-3 w-50 d-flex justify-content-center align-items-center" data-playerid="2" data-bs-toggle="modal" href="#player2-modal" role="button">Edit</a>
+                        <h3 class="text-center fw-bold xysymbol">O</h3>
+                        <a class="btn text-center edit mt-3 d-flex justify-content-center align-items-center" data-playerid="2" data-bs-toggle="modal" href="#player2-modal" role="button">Edit</a>
                     </div>
                 </div>
             </div>
 
             <div id="player2-modal" class="modal fade" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
                 <div class="modal-dialog">
-                    <div class="modal-content">
+                    <div class="modal-content ">
                         <div class="modal-header">
                             <h3 class="modal-title text-uppercase text-center">Choose your name</h3>
                         </div>
+
                         <div class="modal-body">
-                            <p class="fw-bold text-center">Player name</p>
-                            <form id="form2">
-                                <input type="text" name="name" id="player-name2" required>
-                                <button type="submit" class="btn submit" id="submit2" data-bs-dismiss="modal">Submit</button>
+                            <form id="form2" class="d-flex flex-column align-items-center justify-content-center">
+                                <input type="text" name="name" id="player-name2" required placeholder="Enter you name" minlength="4">
+                                <button type="submit" class="btn submit mt-3" id="submit2" data-bs-dismiss="modal">Submit</button>
                             </form>
                         </div>
+
                         <div class="modal-footer">
-                            <button type="button" class="btn" data-bs-dismiss="modal" aria-label="Close">Cancel</button>
+                            <button type="button" class="btn cancelBtnModal" data-bs-dismiss="modal" aria-label="Close">Cancel</button>
                         </div>
                     </div>
                 </div>
@@ -85,25 +84,24 @@
         <div class="btnConteinaer text-center d-flex justify-content-center align-items-center">
             <button type="button" class="btn" id="start-new-btn">Start a new game</button>
         </div>
-        <p class="text-center pt-5">Its your turn <b>PLAYER NAME</b></p>
-        <div class="container winner-msg flex-column justify-content-center align-items-center w-50">
-            <h3 class="p-4 fw-bold">You won <span>Player name</span></h3>
-            <p>Click 'Start a new game</p>
+        <p class="text-center pt-md-5 turnTag dontShow" id="turn-container">Its your turn <b id="player-name-switch">PLAYER NAME</b></p>
+        <div class="container winner-msg flex-column justify-content-center align-items-center w-50" id="winner-banner">
+            <h3 id="winner-name"></h3>
         </div>
         
         <div class="game-field" id="game-field">
 
-            <div class="square" id="square"></div>
-            <div class="square" id="square"></div>
-            <div class="square" id="square"></div>
+            <div class="square" data-col="1" data-row="1"></div>
+            <div class="square" data-col="2" data-row="1"></div>
+            <div class="square" data-col="3" data-row="1"></div>
 
-            <div class="square" id="square"></div>
-            <div class="square" id="square"></div>
-            <div class="square" id="square"></div>
+            <div class="square" data-col="1" data-row="2"></div>
+            <div class="square" data-col="2" data-row="2"></div>
+            <div class="square" data-col="3" data-row="2"></div>
             
-            <div class="square" id="square"></div>
-            <div class="square" id="square"></div>
-            <div class="square" id="square"></div>
+            <div class="square" data-col="1" data-row="3"></div>
+            <div class="square" data-col="2" data-row="3"></div>
+            <div class="square" data-col="3" data-row="3"></div>
 
         </div>
     </div>
@@ -113,4 +111,5 @@
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
 <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/tsparticles-confetti@2.12.0/tsparticles.confetti.bundle.min.js"></script>
 </html>
