@@ -196,15 +196,16 @@ input:focus-visible {
 #player-name-switch{
     text-shadow:10px 9px 20px rgb(50, 211, 222), -10px 9px 20px #002fff ,-13px -9px 20px rgb(0, 19, 128), 13px 9px 20px #00486a;
 }
+.player-intro {
+    justify-content: center;
+}
+#winner-name{
+    text-transform: uppercase;
+    font-weight: bolder;
+}
 
 @media only screen and (max-width: 780px) and (min-width: 300px)  {
 
-    .container{
-        flex-direction: column;
-    }
-    .player-intro{
-        flex-direction: column;
-    }
     .btnConteinaer {
         padding-top: 40px !important;
         padding-bottom: 40px !important;
@@ -224,6 +225,12 @@ input:focus-visible {
     .player-1{
         margin-top: 30px;
         margin-bottom: 30px;
+    }
+    .player-intro{
+        justify-content: space-around;
+    }
+    .modal-dialog{
+        margin: 2.5rem !important;
     }
 }
 
